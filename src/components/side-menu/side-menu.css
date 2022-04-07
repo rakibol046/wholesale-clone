@@ -1,0 +1,143 @@
+.sideBarContainer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  margin-top: 64px;
+  z-index: 0;
+  left: 0;
+  opacity: 1;
+  transition: all 195ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  visibility: visible;
+}
+
+.sideBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 64px;
+  width: 240px;
+  background: white;
+  border-right: 1px solid #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-bottom: 16px;
+  z-index: 1100;
+}
+
+.animateSlideBar {
+  left: 0 !important;
+}
+
+.showSideBar {
+  opacity: 1;
+  visibility: visible;
+}
+.backDrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.sideBar ul {
+  width: 100%;
+}
+.sideBar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sideBar ul li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f6f6f6;
+  transition: all 0.2s ease;
+}
+
+.sideBar ul li:hover {
+  background-color: #0111331c;
+  padding-left: 0.275rem;
+}
+
+.sideBar ul li a,
+.sideBar ul li .a {
+  display: grid;
+  padding: 16px;
+  grid-template-columns: 88% 12%;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+}
+.sideBar ul li a div,
+.sideBar ul li .a div {
+  display: flex;
+  align-items: center;
+}
+.sideBar ul li a span,
+.sideBar ul li .a span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sidebarImage {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+.brandThumbContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.brandThumb {
+  transition: all 0.2s ease;
+}
+
+.brandThumb:hover img {
+  transform: scale(1.08);
+}
+
+.adminSidebarUl i {
+  width: 20px;
+  margin-top: 2px;
+  color: #000000;
+}
+
+@media (max-width: 800px) {
+  .sideBar {
+    left: -240px;
+  }
+  .backDrop {
+    background: rgba(0, 0, 0, 0.45);
+  }
+  .showSideBar {
+    z-index: 10;
+  }
+}
+
+@media (max-width: 800px) {
+  .sideBarContainer {
+    margin-top: 0;
+  }
+  .sideBar {
+    left: -240px;
+    bottom: 0;
+  }
+  .backDrop {
+    background: rgba(0, 0, 0, 0.45);
+  }
+  .showSideBar {
+    z-index: 1100;
+  }
+}

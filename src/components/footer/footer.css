@@ -1,0 +1,140 @@
+.footerContainer {
+  background-color: #fff;
+  color: black;
+  border-top: 5px solid var(--primary-color);
+}
+
+.footerContainer a {
+  color: black !important;
+  line-height: 20px;
+}
+
+.footer {
+  display: grid;
+  padding: 2.5rem 1.5rem 0 1.5rem;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.footerLogo {
+  width: 215px;
+  max-width: 100%;
+}
+
+.socialLink img {
+  width: 28px;
+  margin-right: 0.5rem;
+}
+
+.footer .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+}
+.footer .info span {
+  font-size: 14px;
+}
+
+.footer .info img {
+  width: 16px;
+  margin-right: 0.175rem;
+}
+
+.footer .information div {
+  margin-bottom: 0.375rem;
+}
+
+.footerContainer .companyLogos {
+  padding: 0.5rem 1rem 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  /*box-shadow: 0px 0px 7px #040404 !important;*/
+}
+
+.footerContainer .companyLogos .sisters img {
+  width: 100%;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  height: 80px;
+  object-fit: contain;
+}
+.footerContainer .companyLogos .sisters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  width: 60%;
+}
+
+.footerContainer h2,
+.footerContainer h4 {
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.companyLogos {
+  /*
+  margin: 50px;
+  padding: 30px !important;
+  */
+  margin-bottom: 20px;
+}
+.sisters a {
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0px 0px 10px #f1e3be;
+  border-radius: 8px;
+  /* background-image: linear-gradient( to right, var(--primary-color-dark) 50%, var(--primary-color-light) 100% ); */
+  box-shadow: 0 0 4px rgb(0 0 0 / 20%);
+}
+
+.footerAddressInfo {
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .footerTrigger button {
+    width: 100%;
+    border: none;
+    padding: 20px;
+    text-align: right;
+  }
+  .footerControl {
+    display: none;
+  }
+  .footerHide {
+    display: block;
+  }
+  .footerContainer {
+    padding-bottom: 60px;
+  }
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  .footer div {
+    justify-content: center;
+  }
+  .footerContainer .companyLogos .sisters {
+    width: 100%;
+    grid-gap: 0.575rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.575rem;
+  }
+  .companyLogos {
+    margin: 1.5rem;
+    padding: 2rem;
+  }
+
+  .footerAddressInfo {
+    padding-left: 0;
+  }
+}
